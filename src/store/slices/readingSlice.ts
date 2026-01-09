@@ -27,8 +27,9 @@ export const startReading = createAsyncThunk<ReadingProgress, StartReadingData>(
     try {
       const response = await readingApi.startReading(data);
       return response;
-    } catch (error: any) {
-      return rejectWithValue(error.response?.data?.message || 'Failed to start reading');
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Failed to start reading';
+      return rejectWithValue(errorMessage);
     }
   }
 );
@@ -39,8 +40,9 @@ export const stopReading = createAsyncThunk<ReadingProgress, StopReadingData>(
     try {
       const response = await readingApi.stopReading(data);
       return response;
-    } catch (error: any) {
-      return rejectWithValue(error.response?.data?.message || 'Failed to stop reading');
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Failed to stop reading';
+      return rejectWithValue(errorMessage);
     }
   }
 );
@@ -51,8 +53,9 @@ export const fetchReadingProgress = createAsyncThunk<ReadingProgress, string>(
     try {
       const response = await readingApi.getReadingProgress(bookId);
       return response;
-    } catch (error: any) {
-      return rejectWithValue(error.response?.data?.message || 'Failed to fetch progress');
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Failed to fetch progress';
+      return rejectWithValue(errorMessage);
     }
   }
 );
@@ -63,8 +66,9 @@ export const fetchActivities = createAsyncThunk<ReadingActivity[], string>(
     try {
       const response = await readingApi.getReadingActivities(bookId);
       return response;
-    } catch (error: any) {
-      return rejectWithValue(error.response?.data?.message || 'Failed to fetch activities');
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Failed to fetch activities';
+      return rejectWithValue(errorMessage);
     }
   }
 );
@@ -75,8 +79,9 @@ export const deleteActivity = createAsyncThunk<string, string>(
     try {
       await readingApi.deleteReadingActivity(activityId);
       return activityId;
-    } catch (error: any) {
-      return rejectWithValue(error.response?.data?.message || 'Failed to delete activity');
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Failed to delete activity';
+      return rejectWithValue(errorMessage);
     }
   }
 );
@@ -87,8 +92,9 @@ export const fetchStatistics = createAsyncThunk<ReadingStatistics, string>(
     try {
       const response = await readingApi.getStatistics(bookId);
       return response;
-    } catch (error: any) {
-      return rejectWithValue(error.response?.data?.message || 'Failed to fetch statistics');
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Failed to fetch statistics';
+      return rejectWithValue(errorMessage);
     }
   }
 );

@@ -30,8 +30,9 @@ export const fetchRecommended = createAsyncThunk<
   try {
     const response = await booksApi.getRecommended(filters, { page, limit });
     return response;
-  } catch (error: any) {
-    return rejectWithValue(error.response?.data?.message || 'Failed to fetch books');
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'Failed to fetch books';
+    return rejectWithValue(errorMessage);
   }
 });
 
@@ -41,8 +42,9 @@ export const fetchMyLibrary = createAsyncThunk<Book[], string | undefined>(
     try {
       const response = await booksApi.getMyLibrary(status);
       return response;
-    } catch (error: any) {
-      return rejectWithValue(error.response?.data?.message || 'Failed to fetch library');
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Failed to fetch library';
+      return rejectWithValue(errorMessage);
     }
   }
 );
@@ -53,8 +55,9 @@ export const fetchBookById = createAsyncThunk<BookDetails, string>(
     try {
       const response = await booksApi.getBookById(id);
       return response;
-    } catch (error: any) {
-      return rejectWithValue(error.response?.data?.message || 'Failed to fetch book');
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Failed to fetch book';
+      return rejectWithValue(errorMessage);
     }
   }
 );
@@ -65,8 +68,9 @@ export const addBook = createAsyncThunk<Book, AddBookData>(
     try {
       const response = await booksApi.addBook(data);
       return response;
-    } catch (error: any) {
-      return rejectWithValue(error.response?.data?.message || 'Failed to add book');
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Failed to add book';
+      return rejectWithValue(errorMessage);
     }
   }
 );
@@ -77,8 +81,9 @@ export const removeBook = createAsyncThunk<string, string>(
     try {
       await booksApi.removeBook(id);
       return id;
-    } catch (error: any) {
-      return rejectWithValue(error.response?.data?.message || 'Failed to remove book');
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Failed to remove book';
+      return rejectWithValue(errorMessage);
     }
   }
 );

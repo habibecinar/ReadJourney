@@ -6,7 +6,7 @@ import {
   BooksFilter,
   PaginationParams,
   BooksResponse,
-} from '@types/book.types';
+} from '@/types/book.types';
 
 export const booksApi = {
   getRecommended: async (

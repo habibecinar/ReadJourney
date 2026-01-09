@@ -5,7 +5,7 @@ import {
   StartReadingData,
   StopReadingData,
   ReadingStatistics,
-} from '@types/reading.types';
+} from '@/types/reading.types';
 
 export const readingApi = {
   startReading: async (data: StartReadingData): Promise<ReadingProgress> => {

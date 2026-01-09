@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router-dom';
 import { ROUTES } from '@utils/constants';
-import styles from './Header.module.css';
 
 interface UserNavProps {
   currentPath: string;

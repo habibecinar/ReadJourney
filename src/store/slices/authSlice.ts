@@ -21,8 +21,9 @@ export const register = createAsyncThunk<AuthResponse, RegisterData>(
     try {
       const response = await authApi.register(data);
       return response;
-    } catch (error: any) {
-      return rejectWithValue(error.response?.data?.message || 'Registration failed');
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Registration failed';
+      return rejectWithValue(errorMessage);
     }
   }
 );
@@ -33,8 +34,9 @@ export const login = createAsyncThunk<AuthResponse, LoginData>(
     try {
       const response = await authApi.login(data);
       return response;
-    } catch (error: any) {
-      return rejectWithValue(error.response?.data?.message || 'Login failed');
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Login failed';
+      return rejectWithValue(errorMessage);
     }
   }
 );
@@ -42,8 +44,9 @@ export const login = createAsyncThunk<AuthResponse, LoginData>(
 export const logout = createAsyncThunk('auth/logout', async (_, { rejectWithValue }) => {
   try {
     await authApi.logout();
-  } catch (error: any) {
-    return rejectWithValue(error.response?.data?.message || 'Logout failed');
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'Logout failed';
+    return rejectWithValue(errorMessage);
   }
 });
 
