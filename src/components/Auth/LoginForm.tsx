@@ -7,6 +7,7 @@ import { login as loginAction } from '@store/slices/authSlice';
 import { LoginData } from '@/types/auth.types';
 import { ROUTES } from '@utils/constants';
 import { toast } from 'react-toastify';
+import styles from './Auth.module.css';
 
 const LoginForm = () => {
   const dispatch = useAppDispatch();
@@ -15,7 +16,7 @@ const LoginForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<LoginData>({
     resolver: yupResolver(loginSchema),
   });
@@ -31,18 +32,42 @@ const LoginForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div>
-        <input type="email" placeholder="Email" {...register('email')} />
-        {errors.email && <span>{errors.email.message}</span>}
+    <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+      <div className={styles.inputGroup}>
+        <div className={styles.inputWrapper}>
+          <input
+            type="email"
+            placeholder="Email"
+            className={`${styles.input} ${errors.email ? styles.error : ''}`}
+            {...register('email')}
+          />
+        </div>
+        <div className={styles.errorMessage}>
+          {errors.email?.message || ' '}
+        </div>
       </div>
 
-      <div>
-        <input type="password" placeholder="Password" {...register('password')} />
-        {errors.password && <span>{errors.password.message}</span>}
+      <div className={styles.inputGroup}>
+        <div className={styles.inputWrapper}>
+          <input
+            type="password"
+            placeholder="Password"
+            className={`${styles.input} ${errors.password ? styles.error : ''}`}
+            {...register('password')}
+          />
+        </div>
+        <div className={styles.errorMessage}>
+          {errors.password?.message || ' '}
+        </div>
       </div>
 
-      <button type="submit">Log In</button>
+      <button 
+        type="submit" 
+        className={styles.submitButton}
+        disabled={isSubmitting}
+      >
+        {isSubmitting ? 'Signing in...' : 'Sign In'}
+      </button>
     </form>
   );
 };

@@ -20,7 +20,8 @@ const Header = () => {
       <div className="container">
         <div className={styles.headerContent}>
           <Link to={ROUTES.RECOMMENDED} className={styles.logo}>
-            Read Journey
+            <div className={styles.logoIcon}>📚</div>
+            <span className={styles.logoText}>Read Journey</span>
           </Link>
 
           <UserNav currentPath={location.pathname} />

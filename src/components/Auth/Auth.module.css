@@ -1,0 +1,74 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: var(--color-input-bg);
+  border: 1px solid var(--color-border-input);
+  border-radius: var(--radius-xs);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
+  font-family: var(--font-family);
+  transition: all 0.3s ease;
+  letter-spacing: var(--letter-spacing-tight);
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-white);
+}
+
+.input.error {
+  border-color: var(--color-error);
+}
+
+.errorMessage {
+  font-size: var(--font-size-xs);
+  color: var(--color-error);
+  margin-top: 4px;
+  min-height: 14px;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 12px;
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.submitButton:hover {
+  background-color: rgba(249, 249, 249, 0.9);
+  transform: translateY(-1px);
+}
+
+.submitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

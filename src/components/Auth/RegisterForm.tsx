@@ -7,6 +7,7 @@ import { register as registerAction } from '@store/slices/authSlice';
 import { RegisterData } from '@/types/auth.types';
 import { ROUTES } from '@utils/constants';
 import { toast } from 'react-toastify';
+import styles from './Auth.module.css';
 
 const RegisterForm = () => {
   const dispatch = useAppDispatch();
@@ -15,7 +16,7 @@ const RegisterForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<RegisterData>({
     resolver: yupResolver(registerSchema),
   });
@@ -31,23 +32,56 @@ const RegisterForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div>
-        <input type="text" placeholder="Name" {...register('name')} />
-        {errors.name && <span>{errors.name.message}</span>}
+    <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+      <div className={styles.inputGroup}>
+        <div className={styles.inputWrapper}>
+          <input
+            type="text"
+            placeholder="Name"
+            className={`${styles.input} ${errors.name ? styles.error : ''}`}
+            {...register('name')}
+          />
+        </div>
+        <div className={styles.errorMessage}>
+          {errors.name?.message || ' '}
+        </div>
       </div>
 
-      <div>
-        <input type="email" placeholder="Email" {...register('email')} />
-        {errors.email && <span>{errors.email.message}</span>}
+      <div className={styles.inputGroup}>
+        <div className={styles.inputWrapper}>
+          <input
+            type="email"
+            placeholder="Email"
+            className={`${styles.input} ${errors.email ? styles.error : ''}`}
+            {...register('email')}
+          />
+        </div>
+        <div className={styles.errorMessage}>
+          {errors.email?.message || ' '}
+        </div>
       </div>
 
-      <div>
-        <input type="password" placeholder="Password" {...register('password')} />
-        {errors.password && <span>{errors.password.message}</span>}
+      <div className={styles.inputGroup}>
+        <div className={styles.inputWrapper}>
+          <input
+            type="password"
+            placeholder="Password"
+            className={`${styles.input} ${errors.password ? styles.error : ''}`}
+            {...register('password')}
+          />
+        </div>
+        <div className={styles.errorMessage}>
+          {errors.password?.message || ' '}
+        </div>
       </div>
 
-      <button type="submit">Registration</button>
+      <button 
+        type="submit" 
+        className={styles.submitButton}
+        disabled={isSubmitting}
+      >
+        {isSubmitting ? 'Registering...' : 'Register'}
+      </button>
     </form>
   );
 };

@@ -1,0 +1,115 @@
+.welcomePage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background);
+  padding: 20px;
+}
+
+.content {
+  max-width: 600px;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.logoIcon {
+  width: 42px;
+  height: 42px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.logoText {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 14px;
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.description {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-bottom: 40px;
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 12px 28px;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid;
+  cursor: pointer;
+  letter-spacing: var(--letter-spacing-tight);
+  min-width: 130px;
+}
+
+.buttonPrimary {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-color: var(--color-white);
+}
+
+.buttonPrimary:hover {
+  background-color: rgba(249, 249, 249, 0.9);
+}
+
+.buttonSecondary {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+
+.buttonSecondary:hover {
+  border-color: var(--color-white);
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: var(--font-size-5xl);
+  }
+
+  .description {
+    font-size: var(--font-size-lg);
+  }
+
+  .buttons {
+    gap: 20px;
+  }
+
+  .button {
+    padding: 14px 40px;
+    font-size: var(--font-size-md);
+    min-width: 150px;
+  }
+}

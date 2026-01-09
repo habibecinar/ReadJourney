@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { ROUTES } from '@utils/constants';
+import styles from './Header.module.css';
 
 interface UserNavProps {
   currentPath: string;
@@ -7,20 +8,20 @@ interface UserNavProps {
 
 const UserNav = ({ currentPath }: UserNavProps) => {
   return (
-    <nav>
-      <ul style={{ display: 'flex', gap: 'var(--spacing-md)', listStyle: 'none' }}>
+    <nav className={styles.nav}>
+      <ul className={styles.navList}>
         <li>
           <NavLink
             to={ROUTES.RECOMMENDED}
-            className={currentPath === ROUTES.RECOMMENDED ? 'active' : ''}
+            className={`${styles.navLink} ${currentPath === ROUTES.RECOMMENDED ? styles.active : ''}`}
           >
-            Recommended
+            Home
           </NavLink>
         </li>
         <li>
           <NavLink
             to={ROUTES.LIBRARY}
-            className={currentPath === ROUTES.LIBRARY ? 'active' : ''}
+            className={`${styles.navLink} ${currentPath === ROUTES.LIBRARY ? styles.active : ''}`}
           >
             My Library
           </NavLink>
