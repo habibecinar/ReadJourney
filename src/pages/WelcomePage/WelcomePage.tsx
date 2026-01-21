@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ROUTES } from '@utils/constants';
+import logoDesktop from '@assets/images/Logodesktop.png';
+import logoMobile from '@assets/images/Logomobile.png';
 import styles from './WelcomePage.module.css';
 
 const WelcomePage = () => {
@@ -7,8 +9,16 @@ const WelcomePage = () => {
     <div className={styles.welcomePage}>
       <div className={styles.content}>
         <div className={styles.logo}>
-          <div className={styles.logoIcon}>📚</div>
-          <span className={styles.logoText}>Read Journey</span>
+          <img 
+            src={logoDesktop} 
+            alt="Read Journey" 
+            className={styles.logoDesktop}
+          />
+          <img 
+            src={logoMobile} 
+            alt="Read Journey" 
+            className={styles.logoMobile}
+          />
         </div>
         
         <h1 className={styles.title}>

@@ -20,6 +20,18 @@
   margin-bottom: 40px;
 }
 
+.logoDesktop {
+  height: 32px;
+  width: auto;
+  display: none;
+}
+
+.logoMobile {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
 .logoIcon {
   width: 42px;
   height: 42px;
@@ -95,6 +107,14 @@
 }
 
 @media (min-width: 768px) {
+  .logoDesktop {
+    display: block;
+  }
+
+  .logoMobile {
+    display: none;
+  }
+
   .title {
     font-size: var(--font-size-5xl);
   }

@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import RegisterForm from '@components/Auth/RegisterForm';
 import { ROUTES } from '@utils/constants';
+import logoDesktop from '@assets/images/Logodesktop.png';
+import logoMobile from '@assets/images/Logomobile.png';
 import styles from './RegisterPage.module.css';
 
 const RegisterPage = () => {
@@ -26,8 +28,16 @@ const RegisterPage = () => {
       <div className={styles.rightSection}>
         <div className={styles.formWrapper}>
           <div className={styles.logo}>
-            <div className={styles.logoIcon}>📚</div>
-            <span className={styles.logoText}>Read Journey</span>
+            <img 
+              src={logoDesktop} 
+              alt="Read Journey" 
+              className={styles.logoDesktop}
+            />
+            <img 
+              src={logoMobile} 
+              alt="Read Journey" 
+              className={styles.logoMobile}
+            />
           </div>
 
           <h1 className={styles.title}>Expand your mind, reading <span style={{ color: 'var(--color-accent)' }}>a book</span></h1>

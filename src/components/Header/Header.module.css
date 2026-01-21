@@ -18,6 +18,18 @@
   text-decoration: none;
 }
 
+.logoDesktop {
+  height: 28px;
+  width: auto;
+  display: none;
+}
+
+.logoMobile {
+  height: 24px;
+  width: auto;
+  display: block;
+}
+
 .logoIcon {
   width: 42px;
   height: 42px;
@@ -87,6 +99,14 @@
 @media (min-width: 768px) {
   .nav {
     display: block;
+  }
+
+  .logoDesktop {
+    display: block;
+  }
+
+  .logoMobile {
+    display: none;
   }
 
   .logoText {

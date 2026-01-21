@@ -1,0 +1,45 @@
+.pageLayout {
+  min-height: calc(100vh - 80px);
+  background-color: var(--color-background);
+  padding: 20px 0;
+}
+
+.pageContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mainContent {
+  flex: 1;
+}
+
+.pageTitle {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 20px;
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+@media (min-width: 768px) {
+  .pageLayout {
+    padding: 32px 0;
+  }
+
+  .pageTitle {
+    font-size: var(--font-size-3xl);
+    margin-bottom: 28px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .pageContent {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .mainContent {
+    flex: 1;
+  }
+}

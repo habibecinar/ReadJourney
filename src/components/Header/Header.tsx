@@ -4,6 +4,8 @@ import { logout } from '@store/slices/authSlice';
 import { ROUTES } from '@utils/constants';
 import UserNav from './UserNav';
 import UserBar from './UserBar';
+import logoDesktop from '@assets/images/Logodesktop.png';
+import logoMobile from '@assets/images/Logomobile.png';
 import styles from './Header.module.css';
 
 const Header = () => {
@@ -20,8 +22,16 @@ const Header = () => {
       <div className="container">
         <div className={styles.headerContent}>
           <Link to={ROUTES.RECOMMENDED} className={styles.logo}>
-            <div className={styles.logoIcon}>📚</div>
-            <span className={styles.logoText}>Read Journey</span>
+            <img 
+              src={logoDesktop} 
+              alt="Read Journey" 
+              className={styles.logoDesktop}
+            />
+            <img 
+              src={logoMobile} 
+              alt="Read Journey" 
+              className={styles.logoMobile}
+            />
           </Link>
 
           <UserNav currentPath={location.pathname} />
