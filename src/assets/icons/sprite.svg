@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  
+  <!-- Logo Icon -->
+  <symbol id="icon-logo" viewBox="0 0 42 17">
+    <path d="M0 0.5H33C37.9706 0.5 42 4.52944 42 9.5C42 14.4706 37.9706 18.5 33 18.5H0V0.5Z" fill="currentColor"/>
+  </symbol>
+
+  <!-- Home Icon -->
+  <symbol id="icon-home" viewBox="0 0 28 28">
+    <path d="M3.5 10.5L14 3.5L24.5 10.5V23.3333C24.5 23.8196 24.3068 24.2859 23.963 24.6297C23.6192 24.9734 23.1529 25.1667 22.6667 25.1667H5.33333C4.84711 25.1667 4.38079 24.9734 4.03697 24.6297C3.69315 24.2859 3.5 23.8196 3.5 23.3333V10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M10.5 25.1667V14H17.5V25.1667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- Book Icon -->
+  <symbol id="icon-book" viewBox="0 0 28 28">
+    <path d="M14 3.5C14 3.5 10.5 3.5 7 3.5C5.067 3.5 3.5 5.067 3.5 7V23.3333C3.5 24.2538 4.24619 25 5.16667 25H14M14 3.5V25M14 3.5C14 3.5 17.5 3.5 21 3.5C22.933 3.5 24.5 5.067 24.5 7V23.3333C24.5 24.2538 23.7538 25 22.8333 25H14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </symbol>
+
+  <!-- User Icon -->
+  <symbol id="icon-user" viewBox="0 0 28 28">
+    <path d="M23.3333 24.5V22.1667C23.3333 20.9275 22.8417 19.7392 21.9665 18.864C21.0913 17.9888 19.903 17.4972 18.6667 17.4972H9.33333C8.09695 17.4972 6.90867 17.9888 6.03349 18.864C5.15833 19.7392 4.66667 20.9275 4.66667 22.1667V24.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <circle cx="14" cy="8.16667" r="4.66667" stroke="currentColor" stroke-width="2" fill="none"/>
+  </symbol>
+
+  <!-- Logout Icon -->
+  <symbol id="icon-logout" viewBox="0 0 28 28">
+    <path d="M10.5 24.5H5.83333C5.34711 24.5 4.88079 24.3068 4.53697 23.963C4.19315 23.6192 4 23.1529 4 22.6667V5.33333C4 4.84711 4.19315 4.38079 4.53697 4.03697C4.88079 3.69315 5.34711 3.5 5.83333 3.5H10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M18.6666 19.8333L24.5 14L18.6666 8.16663" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M24.5 14H10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- Arrow Right -->
+  <symbol id="icon-arrow-right" viewBox="0 0 20 20">
+    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </symbol>
+
+  <!-- Arrow Left -->
+  <symbol id="icon-arrow-left" viewBox="0 0 20 20">
+    <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </symbol>
+
+  <!-- Close Icon -->
+  <symbol id="icon-close" viewBox="0 0 22 22">
+    <path d="M17 5L5 17M5 5L17 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- Menu (Burger) -->
+  <symbol id="icon-menu" viewBox="0 0 28 28">
+    <path d="M3.5 14H24.5M3.5 7H24.5M3.5 21H24.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- Trash Icon -->
+  <symbol id="icon-trash" viewBox="0 0 28 28">
+    <path d="M3.5 7H5.83333M5.83333 7H24.5M5.83333 7V23.3333C5.83333 23.8196 6.02649 24.2859 6.37031 24.6297C6.71413 24.9734 7.18044 25.1667 7.66667 25.1667H20.3333C20.8196 25.1667 21.2859 24.9734 21.6297 24.6297C21.9735 24.2859 22.1667 23.8196 22.1667 23.3333V7H5.83333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M9.33337 7V4.66668C9.33337 4.18045 9.52653 3.71413 9.87035 3.37031C10.2142 3.02649 10.6805 2.83334 11.1667 2.83334H16.8334C17.3196 2.83334 17.7859 3.02649 18.1298 3.37031C18.4736 3.71413 18.6667 4.18045 18.6667 4.66668V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- Plus Icon -->
+  <symbol id="icon-plus" viewBox="0 0 28 28">
+    <path d="M14 5.83334V22.1667M5.83337 14H22.1667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- Check Icon -->
+  <symbol id="icon-check" viewBox="0 0 28 28">
+    <path d="M23.3334 7L10.5 19.8333L4.66669 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </symbol>
+
+</svg>
