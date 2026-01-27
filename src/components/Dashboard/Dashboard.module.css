@@ -1,8 +1,8 @@
 .dashboard {
   background-color: var(--color-card-bg);
-  border-radius: var(--radius-sm);
+  border-radius: 12px;
   padding: 20px;
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(249, 249, 249, 0.2);
 }
 
 .section {
@@ -14,11 +14,11 @@
 }
 
 .sectionTitle {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-bold);
+  font-size: 14px;
+  font-weight: 700;
   color: var(--color-text-primary);
-  margin-bottom: 14px;
-  letter-spacing: var(--letter-spacing-tight);
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
 }
 
 .filters {
@@ -30,33 +30,34 @@
 .input {
   width: 100%;
   padding: 12px 14px;
-  background-color: var(--color-input-bg);
-  border: 1px solid var(--color-border-input);
-  border-radius: var(--radius-xs);
+  background-color: transparent;
+  border: 1px solid rgba(249, 249, 249, 0.2);
+  border-radius: 12px;
   color: var(--color-text-primary);
-  font-size: var(--font-size-sm);
+  font-size: 12px;
   font-family: var(--font-family);
   transition: all 0.3s ease;
 }
 
 .input::placeholder {
-  color: var(--color-text-secondary);
+  color: rgba(249, 249, 249, 0.4);
 }
 
 .input:focus {
   outline: none;
   border-color: var(--color-white);
+  background-color: rgba(249, 249, 249, 0.05);
 }
 
 .button {
   width: 100%;
-  padding: 12px;
+  padding: 10px 20px;
   background-color: var(--color-white);
-  color: var(--color-black);
-  border: none;
-  border-radius: var(--radius-md);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-bold);
+  color: #1f1f1f;
+  border: 1px solid rgba(249, 249, 249, 0.2);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 14px;
@@ -64,6 +65,8 @@
 
 .button:hover {
   background-color: rgba(249, 249, 249, 0.9);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .button:disabled {
@@ -72,55 +75,56 @@
 }
 
 .quoteBlock {
-  background: linear-gradient(135deg, var(--color-secondary) 0%, rgba(48, 185, 77, 0.1) 100%);
-  border-radius: var(--radius-xs);
+  background: linear-gradient(135deg, rgba(48, 185, 77, 0.15) 0%, rgba(48, 185, 77, 0.05) 100%);
+  border-radius: 12px;
   padding: 20px;
   margin-top: 20px;
+  border: 1px solid rgba(48, 185, 77, 0.2);
 }
 
 .quoteText {
-  font-size: var(--font-size-base);
-  color: var(--color-text-secondary);
-  line-height: var(--line-height-relaxed);
+  font-size: 14px;
+  color: rgba(249, 249, 249, 0.7);
+  line-height: 1.6;
   font-style: italic;
   margin-bottom: 10px;
 }
 
 .quoteAuthor {
-  font-size: var(--font-size-sm);
+  font-size: 12px;
   color: var(--color-text-primary);
-  font-weight: var(--font-weight-semibold);
+  font-weight: 600;
   text-align: right;
 }
 
 .infoBlock {
-  background-color: rgba(48, 185, 77, 0.05);
+  background-color: rgba(48, 185, 77, 0.08);
   border-left: 3px solid var(--color-accent);
-  padding: 14px;
-  border-radius: var(--radius-xs);
+  padding: 16px;
+  border-radius: 12px;
   margin-top: 14px;
 }
 
 .infoText {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
-  line-height: var(--line-height-relaxed);
+  font-size: 12px;
+  color: rgba(249, 249, 249, 0.7);
+  line-height: 1.6;
 }
 
 .infoLink {
   color: var(--color-accent);
   text-decoration: underline;
-  font-weight: var(--font-weight-semibold);
+  font-weight: 600;
 }
 
 @media (min-width: 768px) {
   .dashboard {
-    padding: 30px;
+    padding: 40px 20px;
   }
 
   .filters {
     flex-direction: row;
-    gap: 10px;
+    gap: 8px;
   }
 
   .input {
@@ -129,13 +133,14 @@
 
   .button {
     width: auto;
-    padding: 12px 28px;
+    padding: 10px 28px;
     margin-top: 0;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
   .dashboard {
-    max-width: 360px;
+    max-width: 353px;
+    padding: 40px 20px;
   }
 }

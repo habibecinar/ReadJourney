@@ -20,8 +20,7 @@ const Filters = ({ onFilter }: FiltersProps) => {
   };
 
   return (
-    <div className={styles.section}>
-      <h3 className={styles.sectionTitle}>Filters</h3>
+    <div className={styles.filterSection}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.filters}>
           <input
@@ -32,13 +31,13 @@ const Filters = ({ onFilter }: FiltersProps) => {
           />
           <input
             type="text"
-            placeholder="Author"
+            placeholder="The author"
             className={styles.input}
             {...register('author')}
           />
         </div>
         <button type="submit" className={styles.button}>
-          Apply Filters
+          To apply
         </button>
       </form>
     </div>

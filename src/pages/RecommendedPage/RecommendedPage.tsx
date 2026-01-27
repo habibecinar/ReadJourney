@@ -59,11 +59,21 @@ const RecommendedPage = () => {
       <div className="container">
         <div className="pageContent">
           <Dashboard>
+            <div style={{ marginBottom: '20px' }}>
+              <h2 style={{ 
+                fontSize: '28px', 
+                fontWeight: 700, 
+                color: 'var(--color-text-primary)',
+                marginBottom: '14px' 
+              }}>
+                Filters
+              </h2>
+            </div>
             <Filters onFilter={handleFilter} />
             <InfoBlock
-              text="Start your reading journey! Explore"
-              linkText="recommended books"
-              linkTo={ROUTES.RECOMMENDED}
+              text="Start your workout! Create"
+              linkText="a personal library"
+              linkTo={ROUTES.LIBRARY}
             />
             <QuoteBlock />
           </Dashboard>

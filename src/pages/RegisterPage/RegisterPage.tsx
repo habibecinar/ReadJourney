@@ -40,10 +40,9 @@ const RegisterPage = () => {
             />
           </div>
 
-          <h1 className={styles.title}>Expand your mind, reading <span style={{ color: 'var(--color-accent)' }}>a book</span></h1>
-          <p className={styles.subtitle}>
-            Create an account to start tracking your reading journey
-          </p>
+          <h1 className={styles.title}>
+            Expand your mind, reading <span className={styles.titleAccent}>a book</span>
+          </h1>
 
           <RegisterForm />
 

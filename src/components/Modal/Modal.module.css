@@ -1,0 +1,155 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-index-modal-backdrop);
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal {
+  background-color: var(--color-card-bg);
+  border-radius: 12px;
+  border: 1px solid rgba(249, 249, 249, 0.2);
+  padding: 40px 20px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal.small {
+  width: 100%;
+  max-width: 335px;
+}
+
+.modal.medium {
+  width: 100%;
+  max-width: 500px;
+}
+
+.modal.large {
+  width: 100%;
+  max-width: 700px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.closeButton:hover {
+  background-color: rgba(249, 249, 249, 0.1);
+  color: var(--color-accent);
+  transform: rotate(90deg);
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 20px;
+  padding-right: 40px;
+  letter-spacing: 0.02em;
+}
+
+.content {
+  color: var(--color-text-primary);
+}
+
+/* Scrollbar styling */
+.modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: rgba(249, 249, 249, 0.05);
+  border-radius: 3px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: rgba(249, 249, 249, 0.2);
+  border-radius: 3px;
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background: rgba(249, 249, 249, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal {
+    padding: 50px 40px;
+  }
+
+  .modal.small {
+    max-width: 400px;
+  }
+
+  .modal.medium {
+    max-width: 600px;
+  }
+
+  .modal.large {
+    max-width: 800px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .modal.small {
+    max-width: 500px;
+  }
+
+  .modal.medium {
+    max-width: 700px;
+  }
+
+  .modal.large {
+    max-width: 900px;
+  }
+}

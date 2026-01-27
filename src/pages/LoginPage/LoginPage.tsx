@@ -40,11 +40,10 @@ const LoginPage = () => {
             />
           </div>
 
-          <h1 className={styles.title}>Expand your mind, reading <span style={{ color: 'var(--color-accent)' }}>a book</span></h1>
-          <p className={styles.subtitle}>
-            Sign in to continue your reading journey
-          </p>
-
+          <h1 className={styles.title}>
+            Expand your mind, reading <span className={styles.titleAccent}>a book</span>
+          </h1>
+          
           <LoginForm />
 
           <p className={styles.linkText}>

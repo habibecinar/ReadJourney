@@ -17,24 +17,25 @@
 .input {
   width: 100%;
   padding: 14px 16px;
-  background-color: var(--color-input-bg);
-  border: 1px solid var(--color-border-input);
-  border-radius: var(--radius-xs);
+  background-color: transparent;
+  border: 1px solid rgba(249, 249, 249, 0.2);
+  border-radius: 12px;
   color: var(--color-text-primary);
-  font-size: var(--font-size-base);
+  font-size: 14px;
   font-family: var(--font-family);
   transition: all 0.3s ease;
-  letter-spacing: var(--letter-spacing-tight);
+  letter-spacing: 0.02em;
   box-sizing: border-box;
 }
 
 .input::placeholder {
-  color: var(--color-text-secondary);
+  color: rgba(249, 249, 249, 0.4);
 }
 
 .input:focus {
   outline: none;
   border-color: var(--color-white);
+  background-color: rgba(249, 249, 249, 0.05);
 }
 
 .input.error {
@@ -42,7 +43,7 @@
 }
 
 .errorMessage {
-  font-size: var(--font-size-xs);
+  font-size: 10px;
   color: var(--color-error);
   margin-top: 4px;
   min-height: 14px;
@@ -52,23 +53,25 @@
   width: 100%;
   padding: 14px;
   background-color: var(--color-white);
-  color: var(--color-black);
-  border: none;
-  border-radius: var(--radius-md);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-bold);
+  color: #1f1f1f;
+  border: 1px solid rgba(249, 249, 249, 0.2);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 12px;
-  letter-spacing: var(--letter-spacing-tight);
+  letter-spacing: 0.02em;
 }
 
 .submitButton:hover {
   background-color: rgba(249, 249, 249, 0.9);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 249, 249, 0.2);
 }
 
 .submitButton:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+  transform: none;
 }

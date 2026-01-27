@@ -75,17 +75,22 @@
 }
 
 .title {
-  font-size: var(--font-size-3xl);
+  font-size: 32px;
   font-weight: var(--font-weight-bold);
   color: var(--color-text-primary);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   letter-spacing: var(--letter-spacing-tight);
+  line-height: 1.2;
+}
+
+.titleAccent {
+  color: var(--color-accent);
 }
 
 .subtitle {
   font-size: var(--font-size-base);
   color: var(--color-text-secondary);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   letter-spacing: var(--letter-spacing-tight);
 }
 
@@ -200,16 +205,20 @@
   }
 
   .title {
-    font-size: var(--font-size-4xl);
+    font-size: 40px;
   }
 
   .subtitle {
-    font-size: var(--font-size-lg);
+    font-size: 18px;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
   .rightSection {
     padding: 40px;
+  }
+
+  .formWrapper {
+    max-width: 500px;
   }
 }

@@ -1,6 +1,6 @@
 .header {
   background-color: var(--color-background);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(249, 249, 249, 0.2);
   padding: 16px 0;
 }
 
@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--spacing-lg);
+  gap: 14px;
 }
 
 .logo {
@@ -58,47 +58,52 @@
 }
 
 .navLink {
-  color: var(--color-text-secondary);
+  color: rgba(249, 249, 249, 0.5);
   text-decoration: none;
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-medium);
+  font-size: 14px;
+  font-weight: 500;
   padding: 8px 16px;
-  border-radius: var(--radius-md);
+  border-radius: 30px;
   transition: all 0.3s ease;
 }
 
 .navLink:hover,
 .navLink.active {
   color: var(--color-text-primary);
-  background-color: var(--color-secondary);
+  background-color: rgba(249, 249, 249, 0.05);
 }
 
 .userSection {
-  display: flex;
+  display: none;
   align-items: center;
-  gap: var(--spacing-md);
+  gap: 10px;
 }
 
 .logoutBtn {
   background-color: transparent;
   color: var(--color-text-primary);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(249, 249, 249, 0.2);
   padding: 10px 20px;
-  border-radius: var(--radius-md);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .logoutBtn:hover {
   border-color: var(--color-white);
-  background-color: var(--color-secondary);
+  background-color: rgba(249, 249, 249, 0.05);
+  transform: translateY(-1px);
 }
 
 @media (min-width: 768px) {
   .nav {
     display: block;
+  }
+
+  .userSection {
+    display: flex;
   }
 
   .logoDesktop {
@@ -109,17 +114,17 @@
     display: none;
   }
 
-  .logoText {
-    font-size: var(--font-size-xl);
-  }
-
   .header {
     padding: 20px 0;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
   .navList {
-    gap: 28px;
+    gap: 32px;
+  }
+
+  .headerContent {
+    gap: 20px;
   }
 }

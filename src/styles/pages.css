@@ -15,11 +15,11 @@
 }
 
 .pageTitle {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
+  font-size: 28px;
+  font-weight: 700;
   color: var(--color-text-primary);
   margin-bottom: 20px;
-  letter-spacing: var(--letter-spacing-tight);
+  letter-spacing: 0.02em;
 }
 
 @media (min-width: 768px) {
@@ -28,15 +28,16 @@
   }
 
   .pageTitle {
-    font-size: var(--font-size-3xl);
+    font-size: 32px;
     margin-bottom: 28px;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
   .pageContent {
     flex-direction: row;
-    gap: 32px;
+    gap: 40px;
+    align-items: flex-start;
   }
 
   .mainContent {

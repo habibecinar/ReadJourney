@@ -21,7 +21,7 @@ body {
   padding: 0 20px;
 }
 
-/* Mobile: 375px */
+/* Mobile: 375px - Full responsive */
 @media (min-width: 375px) {
   .container {
     max-width: 375px;
@@ -37,10 +37,10 @@ body {
   }
 }
 
-/* Desktop: 1280px */
-@media (min-width: 1280px) {
+/* Desktop: 1440px - Technical Specification */
+@media (min-width: 1440px) {
   .container {
-    max-width: 1280px;
+    max-width: 1440px;
     padding: 0 20px;
   }
 }

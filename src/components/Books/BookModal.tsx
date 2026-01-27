@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Book } from '@/types/book.types';
+import Icon from '@components/Icon/Icon';
 import styles from './BookModal.module.css';
 
 interface BookModalProps {
@@ -53,7 +54,7 @@ const BookModal = ({ book, isOpen, onClose, onAddToLibrary }: BookModalProps) =>
     <div className={styles.modalOverlay} onClick={handleOverlayClick}>
       <div className={styles.modalContent}>
         <button className={styles.closeBtn} onClick={onClose} aria-label="Close">
-          ✕
+          <Icon name="close" size={24} />
         </button>
 
         <div className={styles.modalBody}>
