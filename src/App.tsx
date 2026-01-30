@@ -1,7 +1,6 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useAppSelector } from './hooks/redux';
 import WelcomePage from './pages/WelcomePage/WelcomePage';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
 import LoginPage from './pages/LoginPage/LoginPage';
@@ -15,13 +14,10 @@ import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import ErrorBoundary from './components/common/ErrorBoundary/ErrorBoundary';
 
 function App() {
-  const isAuthenticated = useAppSelector((state) => state.auth.isAuthenticated);
-
   return (
     <ErrorBoundary>
-      <BrowserRouter>
-        <>
-          <Routes>
+      <>
+        <Routes>
             {/* Public routes */}
             <Route
               path="/"
@@ -58,6 +54,7 @@ function App() {
             >
               <Route path="/recommended" element={<RecommendedPage />} />
               <Route path="/library" element={<MyLibraryPage />} />
+              <Route path="/reading" element={<ReadingPage />} />
               <Route path="/reading/:bookId" element={<ReadingPage />} />
             </Route>
 
@@ -78,7 +75,6 @@ function App() {
             theme="dark"
           />
         </>
-      </BrowserRouter>
     </ErrorBoundary>
   );
 }

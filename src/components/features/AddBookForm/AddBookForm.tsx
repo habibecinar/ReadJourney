@@ -68,6 +68,19 @@ const AddBookForm = ({ onSubmit, isLoading = false }: AddBookFormProps) => {
           )}
         </div>
 
+        <div className={styles.formGroup}>
+          <label className={styles.label}>Book cover URL (optional):</label>
+          <input
+            {...register('imageUrl')}
+            type="url"
+            placeholder="https://example.com/book-cover.jpg"
+            className={`${styles.input} ${errors.imageUrl ? styles.inputError : ''}`}
+          />
+          {errors.imageUrl && (
+            <p className={styles.errorText}>{errors.imageUrl.message}</p>
+          )}
+        </div>
+
         <button
           type="submit"
           className={styles.submitButton}

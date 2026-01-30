@@ -216,6 +216,14 @@
   padding: var(--spacing-xxl);
 }
 
+.emptyIcon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto var(--spacing-md);
+  object-fit: contain;
+  opacity: 0.5;
+}
+
 .emptyState p {
   font-size: var(--font-size-medium);
   color: var(--color-text-secondary);

@@ -4,6 +4,8 @@ import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
 import { logout } from '../../../features/auth/authSlice';
 import { toast } from 'react-toastify';
 import styles from './Header.module.css';
+import Icon from '../../common/Icon/Icon';
+import profileIcon from '../../../assets/icons/👍.png';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -32,7 +34,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={`container ${styles.container}`}>
         <Link to="/recommended" className={styles.logo}>
-          <span className={styles.logoIcon}>📚</span>
+          <Icon name="logo" size={42} className={styles.logoIcon} />
           <span className={styles.logoText}>READ JOURNEY</span>
         </Link>
 
@@ -50,10 +52,19 @@ const Header = () => {
           >
             My Library
           </Link>
+          <Link
+            to="/reading"
+            className={`${styles.navLink} ${location.pathname.startsWith('/reading') ? styles.active : ''}`}
+          >
+            Reading
+          </Link>
         </nav>
 
         <div className={styles.userSection}>
           <div className={styles.userInfo}>
+            <div className={styles.userAvatar}>
+              <img src={profileIcon} alt="Profile" className={styles.avatarIcon} />
+            </div>
             <span className={styles.userName}>{user?.name || 'User'}</span>
           </div>
           <button onClick={handleLogout} className={styles.logoutBtn}>
@@ -95,7 +106,25 @@ const Header = () => {
                 >
                   My Library
                 </Link>
+                <Link
+                  to="/reading"
+                  className={`${styles.mobileNavLink} ${location.pathname.startsWith('/reading') ? styles.active : ''}`}
+                  onClick={closeMobileMenu}
+                >
+                  Reading
+                </Link>
               </nav>
+              <div className={styles.mobileUserSection}>
+                <div className={styles.userInfo}>
+                  <div className={styles.userAvatar}>
+                    <img src={profileIcon} alt="Profile" className={styles.avatarIcon} />
+                  </div>
+                  <span className={styles.userName}>{user?.name || 'User'}</span>
+                </div>
+                <button onClick={handleLogout} className={styles.logoutBtn}>
+                  Log out
+                </button>
+              </div>
             </div>
           </div>
         )}

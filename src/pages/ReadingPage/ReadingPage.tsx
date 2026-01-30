@@ -10,6 +10,7 @@ import Statistics from '../../components/features/Statistics/Statistics';
 import Modal from '../../components/common/Modal/Modal';
 import SuccessModal from '../../components/common/Modal/SuccessModal';
 import styles from './ReadingPage.module.css';
+import bookIcon from '../../assets/icons/📚.png';
 
 const ReadingPage = () => {
   const { bookId } = useParams();
@@ -70,8 +71,9 @@ const ReadingPage = () => {
     return (
       <div className={styles.readingPage}>
         <div className={styles.emptyState}>
+          <img src={bookIcon} alt="Books" className={styles.emptyIcon} />
           <p>No book selected</p>
-          <p className={styles.hint}>Please select a book from your library</p>
+          <p className={styles.hint}>Please select a book from your library to start reading</p>
         </div>
       </div>
     );
@@ -144,6 +146,7 @@ const ReadingPage = () => {
         <SuccessModal
           message="🎉 Congratulations! You have finished reading this book!"
           onClose={() => setShowSuccessModal(false)}
+          variant="book"
         />
       </Modal>
     </div>

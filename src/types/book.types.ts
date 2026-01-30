@@ -54,6 +54,7 @@ export interface AddBookData {
   title: string;
   author: string;
   totalPages: number;
+  imageUrl?: string;
 }
 
 export interface StartReadingData {

@@ -9,6 +9,7 @@ import BookDetailsModal from '../../components/common/Modal/BookDetailsModal';
 import SuccessModal from '../../components/common/Modal/SuccessModal';
 import { UserBook, AddBookData } from '../../types/book.types';
 import styles from './MyLibraryPage.module.css';
+import bookIcon from '../../assets/icons/📚.png';
 
 const MyLibraryPage = () => {
   const dispatch = useAppDispatch();
@@ -124,9 +125,10 @@ const MyLibraryPage = () => {
               ))
             ) : (
               <div className={styles.emptyState}>
+                <img src={bookIcon} alt="Books" className={styles.emptyIcon} />
                 <p>No books found</p>
                 <p className={styles.emptyHint}>
-                  Add books to start tracking your reading journey
+                  To get started, create a library and add the books you intend to read.
                 </p>
               </div>
             )}
@@ -157,6 +159,7 @@ const MyLibraryPage = () => {
         <SuccessModal
           message="Good job! The book has been successfully added to your library."
           onClose={() => setShowSuccessModal(false)}
+          variant="book"
         />
       </Modal>
     </div>

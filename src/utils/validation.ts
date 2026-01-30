@@ -43,6 +43,10 @@ export const addBookSchema = yup.object().shape({
     .positive('Total pages must be positive')
     .integer('Total pages must be an integer')
     .min(1, 'Total pages must be at least 1'),
+  imageUrl: yup
+    .string()
+    .url('Must be a valid URL')
+    .optional(),
 });
 
 export const readingPageSchema = yup.object().shape({
