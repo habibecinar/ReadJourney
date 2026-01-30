@@ -41,6 +41,39 @@
   margin-bottom: var(--spacing-md);
 }
 
+.detailsWrapper {
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.detailsHeader {
+  display: flex;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.viewButton {
+  flex: 1;
+  padding: var(--spacing-md);
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  transition: all var(--transition-base);
+  border-bottom: 2px solid transparent;
+}
+
+.viewButton:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-input-bg);
+}
+
+.viewButton.active {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+  background-color: var(--color-input-bg);
+}
+
 .readingControl h2,
 .details h3 {
   font-size: var(--font-size-large);
@@ -100,6 +133,31 @@
 .totalPages {
   font-size: var(--font-size-small);
   color: var(--color-accent);
+  margin-bottom: var(--spacing-sm);
+}
+
+.status {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status.unread {
+  background-color: rgba(104, 104, 104, 0.2);
+  color: var(--color-text-secondary);
+}
+
+.status.in-progress {
+  background-color: rgba(255, 165, 0, 0.2);
+  color: #FFA500;
+}
+
+.status.done {
+  background-color: rgba(48, 185, 77, 0.2);
+  color: var(--color-accent);
 }
 
 .emptyState {
@@ -107,4 +165,9 @@
   color: var(--color-text-secondary);
   font-size: var(--font-size-medium);
   padding: var(--spacing-xxl);
+}
+
+.hint {
+  font-size: var(--font-size-small);
+  margin-top: var(--spacing-sm);
 }
