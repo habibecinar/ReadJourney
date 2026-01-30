@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
 import { logout } from '../../../features/auth/authSlice';
 import { toast } from 'react-toastify';
 import styles from './Header.module.css';
+import profileIcon from '../../../assets/icons/👍.png';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -61,7 +62,7 @@ const Header = () => {
         <div className={styles.userSection}>
           <div className={styles.userInfo}>
             <div className={styles.userAvatar}>
-              <img src="/src/assets/icons/👍.png" alt="User" className={styles.avatarIcon} />
+              <img src={profileIcon} alt="Profile" className={styles.avatarIcon} />
             </div>
             <span className={styles.userName}>{user?.name || 'User'}</span>
           </div>
@@ -115,7 +116,7 @@ const Header = () => {
               <div className={styles.mobileUserSection}>
                 <div className={styles.userInfo}>
                   <div className={styles.userAvatar}>
-                    <img src="/src/assets/icons/👍.png" alt="User" className={styles.avatarIcon} />
+                    <img src={profileIcon} alt="Profile" className={styles.avatarIcon} />
                   </div>
                   <span className={styles.userName}>{user?.name || 'User'}</span>
                 </div>
