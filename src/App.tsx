@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useAppSelector } from './hooks/redux';
@@ -19,9 +19,8 @@ function App() {
 
   return (
     <ErrorBoundary>
-      <BrowserRouter>
-        <>
-          <Routes>
+      <>
+        <Routes>
             {/* Public routes */}
             <Route
               path="/"
@@ -79,7 +78,6 @@ function App() {
             theme="dark"
           />
         </>
-      </BrowserRouter>
     </ErrorBoundary>
   );
 }
