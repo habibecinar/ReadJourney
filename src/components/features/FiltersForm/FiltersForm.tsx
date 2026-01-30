@@ -1,11 +1,11 @@
-import { useForm } from 'react-hook-form';
+import { useForm, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { filterSchema } from '../../../utils/validation';
 import styles from './FiltersForm.module.css';
 
 interface FiltersFormData {
-  title?: string;
-  author?: string;
+  title: string;
+  author: string;
 }
 
 interface FiltersFormProps {
@@ -19,7 +19,7 @@ const FiltersForm = ({ onSubmit }: FiltersFormProps) => {
     reset,
     formState: { errors },
   } = useForm<FiltersFormData>({
-    resolver: yupResolver(filterSchema),
+    resolver: yupResolver(filterSchema) as any,
     defaultValues: {
       title: '',
       author: '',
@@ -31,10 +31,14 @@ const FiltersForm = ({ onSubmit }: FiltersFormProps) => {
     onSubmit({ title: '', author: '' });
   };
 
+  const handleFormSubmit: SubmitHandler<FiltersFormData> = (data) => {
+    onSubmit(data);
+  };
+
   return (
     <div className={styles.filtersForm}>
       <h2 className={styles.title}>Filters</h2>
-      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+      <form onSubmit={handleSubmit(handleFormSubmit)} className={styles.form}>
         <div className={styles.formGroup}>
           <label className={styles.label}>Book title:</label>
           <input

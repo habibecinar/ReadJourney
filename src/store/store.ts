@@ -19,8 +19,10 @@ const authPersistConfig = {
   whitelist: ['token', 'user', 'isAuthenticated'],
 };
 
+const persistedAuthReducer = persistReducer(authPersistConfig, authReducer);
+
 const rootReducer = combineReducers({
-  auth: persistReducer(authPersistConfig, authReducer),
+  auth: persistedAuthReducer,
   books: booksReducer,
 });
 
