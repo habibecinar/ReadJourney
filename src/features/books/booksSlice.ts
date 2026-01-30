@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import { booksAPI } from '../../services/api/books.api';
 import { BooksState, Book, UserBook, AddBookData, StartReadingData, FinishReadingData } from '../../types/book.types';
+import { logout } from '../auth/authSlice';
 
 const initialState: BooksState = {
   recommended: {
@@ -166,7 +167,10 @@ const booksSlice = createSlice({
         if (bookIndex !== -1) {
           state.library.books[bookIndex] = action.payload;
         }
-      });
+      })
+      // Reset state on logout
+      .addCase(logout.fulfilled, () => initialState)
+      .addCase(logout.rejected, () => initialState);
   },
 });
 
