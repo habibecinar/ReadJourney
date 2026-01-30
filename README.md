@@ -285,20 +285,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
-
-## 🙏 Acknowledgments
-
-- Design by [GoIT](https://www.figma.com/file/z3m0rdBcEfLTJUBDkAKhWQ/BOOKS-READING)
-- Icons from [Heroicons](https://heroicons.com/)
-- Inspiration from various book tracking apps
-
-## 📞 Support
-
-For support, email support@readjourney.app or open an issue on GitHub.
-
----
+**Habibe Çınar**
+- LinkedIn: [habibe Çınar](https://www.linkedin.com/in/habibecinar/)
 
 **Happy Reading! 📚✨**
