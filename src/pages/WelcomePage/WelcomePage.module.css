@@ -1,0 +1,122 @@
+.welcomePage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background);
+  padding: var(--spacing-xl) 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxl);
+  align-items: center;
+}
+
+@media screen and (min-width: 1440px) {
+  .content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.textContent {
+  flex: 1;
+  max-width: 600px;
+}
+
+.title {
+  font-size: var(--font-size-xxlarge);
+  line-height: 1.1;
+  margin-bottom: var(--spacing-lg);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 767px) {
+  .title {
+    font-size: var(--font-size-xlarge);
+  }
+}
+
+.highlight {
+  color: var(--color-accent);
+}
+
+.subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.registerBtn,
+.loginBtn {
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  font-weight: 700;
+  font-size: var(--font-size-medium);
+  transition: all var(--transition-base);
+  display: inline-block;
+}
+
+.registerBtn {
+  background-color: var(--color-accent);
+  color: var(--color-secondary);
+}
+
+.registerBtn:hover {
+  background-color: #28a043;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(48, 185, 77, 0.3);
+}
+
+.loginBtn {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+
+.loginBtn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.imageContent {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagePlaceholder {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-input-bg) 100%);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-border);
+}
+
+.bookIcon {
+  font-size: 120px;
+}
+
+@media screen and (min-width: 768px) {
+  .imagePlaceholder {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .bookIcon {
+    font-size: 160px;
+  }
+}
