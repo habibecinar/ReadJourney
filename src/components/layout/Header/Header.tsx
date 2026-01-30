@@ -50,10 +50,19 @@ const Header = () => {
           >
             My Library
           </Link>
+          <Link
+            to="/reading"
+            className={`${styles.navLink} ${location.pathname.startsWith('/reading') ? styles.active : ''}`}
+          >
+            Reading
+          </Link>
         </nav>
 
         <div className={styles.userSection}>
           <div className={styles.userInfo}>
+            <div className={styles.userAvatar}>
+              <img src="/src/assets/icons/👍.png" alt="User" className={styles.avatarIcon} />
+            </div>
             <span className={styles.userName}>{user?.name || 'User'}</span>
           </div>
           <button onClick={handleLogout} className={styles.logoutBtn}>
@@ -95,7 +104,25 @@ const Header = () => {
                 >
                   My Library
                 </Link>
+                <Link
+                  to="/reading"
+                  className={`${styles.mobileNavLink} ${location.pathname.startsWith('/reading') ? styles.active : ''}`}
+                  onClick={closeMobileMenu}
+                >
+                  Reading
+                </Link>
               </nav>
+              <div className={styles.mobileUserSection}>
+                <div className={styles.userInfo}>
+                  <div className={styles.userAvatar}>
+                    <img src="/src/assets/icons/👍.png" alt="User" className={styles.avatarIcon} />
+                  </div>
+                  <span className={styles.userName}>{user?.name || 'User'}</span>
+                </div>
+                <button onClick={handleLogout} className={styles.logoutBtn}>
+                  Log out
+                </button>
+              </div>
             </div>
           </div>
         )}

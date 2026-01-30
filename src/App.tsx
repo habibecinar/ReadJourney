@@ -58,6 +58,7 @@ function App() {
             >
               <Route path="/recommended" element={<RecommendedPage />} />
               <Route path="/library" element={<MyLibraryPage />} />
+              <Route path="/reading" element={<ReadingPage />} />
               <Route path="/reading/:bookId" element={<ReadingPage />} />
             </Route>
 
