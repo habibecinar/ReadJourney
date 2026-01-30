@@ -74,6 +74,10 @@
   font-weight: 700;
   font-size: var(--font-size-medium);
   transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
 }
 
 .submitButton:hover:not(:disabled) {
@@ -85,4 +89,9 @@
 .submitButton:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+.buttonIcon {
+  font-size: 20px;
+  line-height: 1;
 }

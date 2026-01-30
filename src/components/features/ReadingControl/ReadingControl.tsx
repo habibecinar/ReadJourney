@@ -76,6 +76,7 @@ const ReadingControl = ({
           className={styles.submitButton}
           disabled={isLoading}
         >
+          <span className={styles.buttonIcon}>⭐</span>
           {isLoading ? 'Loading...' : isReading ? 'To stop' : 'To start'}
         </button>
       </form>

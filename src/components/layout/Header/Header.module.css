@@ -24,6 +24,12 @@
   opacity: 0.8;
 }
 
+.logoImage {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
 .logoIcon {
   font-size: 24px;
 }
