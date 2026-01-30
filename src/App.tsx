@@ -1,7 +1,6 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useAppSelector } from './hooks/redux';
 import WelcomePage from './pages/WelcomePage/WelcomePage';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
 import LoginPage from './pages/LoginPage/LoginPage';
@@ -15,8 +14,6 @@ import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import ErrorBoundary from './components/common/ErrorBoundary/ErrorBoundary';
 
 function App() {
-  const isAuthenticated = useAppSelector((state) => state.auth.isAuthenticated);
-
   return (
     <ErrorBoundary>
       <>

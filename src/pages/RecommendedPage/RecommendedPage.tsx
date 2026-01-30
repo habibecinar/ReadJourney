@@ -24,8 +24,8 @@ const RecommendedPage = () => {
     dispatch(fetchRecommendedBooks({ page: 1, limit: 10, ...filters }));
   }, [dispatch, filters]);
 
-  const handleFilterSubmit = (data: { title: string; author: string }) => {
-    setFilters(data);
+  const handleFilterSubmit = (data: { title?: string; author?: string }) => {
+    setFilters({ title: data.title || '', author: data.author || '' });
   };
 
   const handlePageChange = (page: number) => {

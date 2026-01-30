@@ -4,8 +4,8 @@ import { filterSchema } from '../../../utils/validation';
 import styles from './FiltersForm.module.css';
 
 interface FiltersFormData {
-  title: string;
-  author: string;
+  title?: string;
+  author?: string;
 }
 
 interface FiltersFormProps {
