@@ -4,8 +4,8 @@ import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
 import { logout } from '../../../features/auth/authSlice';
 import { toast } from 'react-toastify';
 import styles from './Header.module.css';
+import Icon from '../../common/Icon/Icon';
 import profileIcon from '../../../assets/icons/👍.png';
-import logoIcon from '../../../assets/icons/Logo (3).png';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -34,7 +34,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={`container ${styles.container}`}>
         <Link to="/recommended" className={styles.logo}>
-          <img src={logoIcon} alt="Read Journey" className={styles.logoImage} />
+          <Icon name="logo" size={42} className={styles.logoIcon} />
           <span className={styles.logoText}>READ JOURNEY</span>
         </Link>
 

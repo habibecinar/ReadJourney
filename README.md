@@ -2,7 +2,7 @@
 
 A modern, feature-rich web application for tracking your reading progress, managing your personal book library, and analyzing your reading statistics with beautiful visualizations.
 
-[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](http://localhost:3000)
+[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://readjourney.netlify.app)
 [![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3.3-blue.svg)](https://www.typescriptlang.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
@@ -16,6 +16,11 @@ Read Journey is a comprehensive book reading tracker that helps users:
 - 📊 Visualize reading habits through interactive charts and statistics
 - 🎯 Monitor reading speed and completion rates
 - ✨ Beautiful, responsive design that works on all devices
+
+## 🎨 Design
+
+- **Figma Design**: [View on Figma](https://www.figma.com/file/z3m0rdBcEfLTJUBDkAKhWQ/BOOKS-READING?type=design&node-id=18743%3A4973&mode=design&t=Hi1KTaUJMogWXZzz-1)
+- **Technical Specification**: [Backend API Documentation](https://readjourney.b.goit.study/api-docs/)
 
 ## 🛠️ Technologies Used
 
